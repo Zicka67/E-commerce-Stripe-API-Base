@@ -5,11 +5,9 @@ import ClearIcon from "@mui/icons-material/Clear";
 
 export default function ShoppingCartTable( {removeItemFromShoppingCart, shoppingCart} ) {
 
-    // Dans le composant ShoppingCartTable
     const totalQuantity = shoppingCart?.items?.reduce((total, item) => total + item.quantity, 0) ?? 0;
     const totalPrice = shoppingCart?.items?.reduce((total, item) => total + item.quantity * item.product.price, 0) ?? 0;
 
-    
     return (
         <TableContainer>
             <Table>
